@@ -37,7 +37,7 @@ lazy val sharedSettings = Seq(
   scalaVersion := "2.13.3",
 
   headerLicense := Some(HeaderLicense.Custom(
-    s"""|Copyright (c) \${java.time.YearMonth.now.getYear} $developer_name$.
+    s"""|Copyright (c) 2020 $developer_name$.
         |All rights reserved.
         |""".stripMargin
   )),
