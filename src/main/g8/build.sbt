@@ -36,6 +36,12 @@ lazy val sharedSettings = Seq(
   organization := "$organization$",
   scalaVersion := "2.13.3",
 
+  headerLicense := Some(HeaderLicense.Custom(
+    s"""|Copyright (c) \${java.time.YearMonth.now.getYear} $developer_name$.
+        |All rights reserved.
+        |""".stripMargin
+  )),
+
   // Turning off fatal warnings for doc generation
   scalacOptions.in(Compile, doc) ~= filterConsoleScalacOptions,
 
