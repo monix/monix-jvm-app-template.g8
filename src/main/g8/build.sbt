@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------------------
 // Commands
 
-addCommandAlias("ci", ";scalafmtCheckAll ;compile ;test ;package")
+addCommandAlias("ci", ";project root ;scalafmtCheckAll ;compile ;test ;package")
 
 // ---------------------------------------------------------------------------
 // Dependencies
