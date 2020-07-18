@@ -7,6 +7,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
+      - uses: olafurpg/setup-scala@v5
+        with:
+          java-version: "adopt@1.11"
 
       - name: Test
         run: |
