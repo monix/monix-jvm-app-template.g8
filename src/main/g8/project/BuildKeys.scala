@@ -58,7 +58,7 @@ object BuildKeys {
     settingKey[String]("GitHub repository ID (e.g. project_name)")
 
   /**
-    * Example: `alexandru/my-typelevel-library`
+    * Example: `monix/monix-jvm-app-template.g8`
     */
   lazy val githubFullRepositoryID =
     Def.setting(
