@@ -1,5 +1,3 @@
-import BuildKeys._
-
 // ---------------------------------------------------------------------------
 // Commands
 
@@ -29,10 +27,6 @@ def defaultPlugins: Project ⇒ Project = pr => {
 }
 
 lazy val sharedSettings = Seq(
-  projectTitle := "$name$",
-  githubOwnerID := "$github_user_id$",
-  githubRelativeRepositoryID := "$github_repository_name$",
-
   organization := "$organization$",
   scalaVersion := "2.13.3",
 
