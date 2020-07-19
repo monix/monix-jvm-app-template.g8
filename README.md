@@ -12,6 +12,10 @@ Using [sbt](https://www.scala-sbt.org/download.html) run the following in a term
 sbt --sbt-version 1.3.13 new monix/monix-jvm-app-template.g8
 ```
 
+## Other Templates
+
+- [alexandru/typelevel-library.g8](https://github.com/alexandru/typelevel-library.g8): a template for initiating a Typelevel library, with everything ready to be published
+
 Template license
 ----------------
 
