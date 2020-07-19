@@ -36,8 +36,9 @@ lazy val sharedSettings = Seq(
       s"""|Copyright (c) 2020 $developer_name$.
           |All rights reserved.
           |""".stripMargin
-    )),
-
+    )
+  ),
+  //
   // Turning off fatal warnings for doc generation
   scalacOptions.in(Compile, doc) ~= filterConsoleScalacOptions,
 
@@ -60,7 +61,8 @@ def defaultProjectConfiguration(pr: Project) = {
     .settings(sharedSettings)
 }
 
-lazy val root = project.in(file("."))
+lazy val root = project
+  .in(file("."))
   .aggregate($sub_project_id$)
   .dependsOn($sub_project_id$)
   .configure(defaultProjectConfiguration)
