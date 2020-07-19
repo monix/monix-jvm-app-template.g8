@@ -64,6 +64,9 @@ lazy val root = project.in(file("."))
   .aggregate($sub_project_id$)
   .dependsOn($sub_project_id$)
   .configure(defaultProjectConfiguration)
+  .settings(
+    mainClass in (Compile, run) := Some("$package$.Main")
+  )
 
 lazy val $sub_project_id$ = project
   .in(file("$sub_project_id$"))
