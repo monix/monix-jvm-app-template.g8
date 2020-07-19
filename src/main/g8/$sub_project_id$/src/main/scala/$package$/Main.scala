@@ -18,13 +18,14 @@ import java.time.format.DateTimeFormatter
 object Main extends TaskApp {
 
   def stream(period: FiniteDuration): Observable[LocalDateTime] =
-    Observable.intervalAtFixedRate(period)
+    Observable
+      .intervalAtFixedRate(period)
       .mapEval(_ => ExampleUtils.currentTime)
 
-  override def run(args: List[String]): Task[ExitCode] = 
+  override def run(args: List[String]): Task[ExitCode] =
     Task.suspend {
       println("\nClock:\n")
-      
+
       stream(500.millis)
         .map(_.format(DateTimeFormatter.ofPattern("HH:mm:ss")))
         .mapEval(dt => Task(print(s"\r\$dt")))

@@ -21,8 +21,8 @@ object ExampleUtils {
   def currentTime[F[_]: Sync](implicit clock: Clock[F]): F[LocalDateTime] =
     clock.realTime(TimeUnit.MILLISECONDS).map { ts =>
       LocalDateTime.ofInstant(
-        Instant.ofEpochMilli(ts), 
+        Instant.ofEpochMilli(ts),
         ju.TimeZone.getDefault().toZoneId()
-      ) 
+      )
     }
 }
